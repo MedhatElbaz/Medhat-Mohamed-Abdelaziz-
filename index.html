@@ -7,37 +7,56 @@
   <title>Medhat Elbaz | Cybersecurity</title>
   <style>
     * { box-sizing: border-box; }
+    :root { color-scheme: dark; }
     body {
-      margin: 0; min-height: 100vh; display: grid; place-items: center;
-      padding: 24px; color: #eaf5eb;
+      margin: 0; min-height: 100svh; display: grid; place-items: center;
+      padding: clamp(18px, 5vw, 40px); color: #eaf5eb;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
-      background: radial-gradient(ellipse at top, #15351d 0%, #08120b 42%, #050807 100%);
+      background:
+        radial-gradient(circle at 50% 8%, rgba(44,115,54,.30), transparent 34%),
+        radial-gradient(ellipse at top, #12291a 0%, #07110a 48%, #040605 100%);
     }
     .card {
-      width: min(100%, 440px); text-align: center; padding: 36px 26px 28px;
-      border: 1px solid rgba(75, 220, 95, .22); border-radius: 24px;
-      background: rgba(10, 19, 12, .82); box-shadow: 0 24px 70px rgba(0,0,0,.45);
-      backdrop-filter: blur(12px);
+      width: min(100%, 460px); text-align: center;
+      padding: clamp(28px, 6vw, 42px) clamp(20px, 5vw, 34px) 30px;
+      border: 1px solid rgba(75, 220, 95, .25); border-radius: 28px;
+      background: linear-gradient(160deg, rgba(13,25,16,.96), rgba(7,13,9,.96));
+      box-shadow: 0 28px 80px rgba(0,0,0,.52), inset 0 1px 0 rgba(255,255,255,.035);
+      backdrop-filter: blur(14px);
     }
     .mark {
-      width: 76px; height: 76px; margin: 0 auto 18px; border-radius: 22px;
-      display: grid; place-items: center; color: #8cff8c; font-size: 28px; font-weight: 800;
-      border: 1px solid #35d335; background: rgba(53,211,53,.08);
-      box-shadow: 0 0 28px rgba(53,211,53,.12);
+      width: 78px; height: 78px; margin: 0 auto 20px; border-radius: 24px;
+      display: grid; place-items: center; color: #8cff8c; font-size: 27px; font-weight: 800;
+      letter-spacing: 1px; border: 1px solid rgba(53,211,53,.85);
+      background: linear-gradient(145deg, rgba(53,211,53,.12), rgba(53,211,53,.025));
+      box-shadow: 0 0 30px rgba(53,211,53,.10);
     }
-    h1 { margin: 0; font-size: clamp(24px, 6vw, 31px); letter-spacing: 1.5px; }
-    .role { margin: 10px 0 26px; color: #a9b9ad; font-size: 14px; }
-    .links { display: grid; gap: 13px; }
+    h1 { margin: 0; font-size: clamp(23px, 6vw, 30px); line-height: 1.2; letter-spacing: clamp(1px, .4vw, 2px); }
+    .role { margin: 12px 0 30px; color: #a9b9ad; font-size: clamp(13px, 3.5vw, 14px); line-height: 1.5; }
+    .links { display: grid; gap: 12px; }
     .link {
-      display: flex; align-items: center; justify-content: center; gap: 11px;
-      width: 100%; padding: 16px 18px; border-radius: 13px;
-      color: #eaf5eb; text-decoration: none; font-weight: 650; letter-spacing: .2px;
-      background: #122219; border: 1px solid rgba(77, 211, 83, .28);
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      min-height: 58px; width: 100%; padding: 15px 18px; border-radius: 14px;
+      color: #edf8ef; text-decoration: none; font-weight: 650; font-size: 15px; letter-spacing: .2px;
+      background: linear-gradient(110deg, rgba(19,38,25,.96), rgba(13,27,18,.96));
+      border: 1px solid rgba(77, 211, 83, .25);
       transition: transform .18s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
     }
-    .link:hover { transform: translateY(-2px); border-color: #35d335; background: #183321; box-shadow: 0 8px 24px rgba(53,211,53,.12); }
+    .link:hover, .link:focus-visible {
+      transform: translateY(-2px); outline: none; border-color: #43df4a;
+      background: linear-gradient(110deg, #173323, #112619);
+      box-shadow: 0 9px 26px rgba(53,211,53,.13);
+    }
     .icon { color: #72ef7b; width: 21px; height: 21px; flex: 0 0 auto; }
-    footer { margin-top: 25px; font-size: 12px; color: #718177; letter-spacing: 1px; }
+    footer { margin-top: 26px; font-size: 11px; color: #718177; letter-spacing: 1.5px; }
+    @media (max-width: 380px) {
+      .card { border-radius: 22px; padding: 26px 18px 24px; }
+      .link { min-height: 54px; font-size: 14px; }
+      .role { margin-bottom: 24px; }
+    }
+    @media (min-width: 700px) {
+      .card { padding: 42px 34px 32px; }
+    }
     @media (prefers-reduced-motion: reduce) { .link { transition: none; } .link:hover { transform: none; } }
   </style>
 </head>
