@@ -19,9 +19,9 @@ main:before{content:"";position:absolute;inset:8px;border:1px solid rgba(105,255
 .topline{display:flex;justify-content:center;align-items:center;gap:8px;margin:0 0 22px;color:#83ed91;font:11px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:2px;text-transform:uppercase}
 .dot{width:7px;height:7px;border-radius:50%;background:#69ff78;box-shadow:0 0 12px #69ff78;animation:pulse 1.6s infinite}
 @keyframes pulse{50%{opacity:.35;box-shadow:0 0 3px #69ff78}}
-.photo{width:156px;height:156px;margin:0 auto 21px;padding:4px;border-radius:50%;background:conic-gradient(from 0deg,#69ff78,#15331d,#69ff78);box-shadow:0 0 25px rgba(105,255,120,.2);animation:halo 5s linear infinite;display:grid;place-items:center}
+.photo{width:142px;height:142px;margin:0 auto 21px;padding:4px;border-radius:50%;background:conic-gradient(from 0deg,#69ff78,#15331d,#69ff78);box-shadow:0 0 25px rgba(105,255,120,.2);animation:halo 5s linear infinite}
 @keyframes halo{to{filter:hue-rotate(18deg)}}
-.photo img{display:block;width:92%;height:92%;margin:auto;border-radius:50%;object-fit:contain;object-position:50% 38%;background:#fff;transform:none;border:3px solid #09110b}
+.photo img{display:block;width:100%;height:100%;border-radius:50%;object-fit:contain;object-position:center center;background:#fff;transform:rotate(0deg);border:3px solid #09110b}
 h1{font-size:clamp(22px,5.8vw,28px);line-height:1.25;letter-spacing:1.2px;margin:0;text-shadow:0 0 18px rgba(105,255,120,.15)}
 .role{margin:11px 0 20px;color:#a8b9ad;font-size:13px;letter-spacing:.4px}
 .terminal{margin:0 auto 24px;padding:12px 13px;border:1px solid rgba(105,255,120,.16);border-radius:10px;background:rgba(0,0,0,.3);text-align:left;color:#9ab6a0;font:11px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;min-height:43px}
@@ -43,7 +43,7 @@ h1{font-size:clamp(22px,5.8vw,28px);line-height:1.25;letter-spacing:1.2px;margin
 .btn:hover,.btn:focus-visible{outline:none;transform:translateY(-2px);border-color:#69ff78;background:#14271a;box-shadow:0 8px 25px rgba(65,255,90,.13),inset 0 0 15px rgba(65,255,90,.04)}
 .btn:hover:before{left:150%}
 footer{margin-top:22px;color:#55715b;font:10px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:1.3px}
-@media(max-width:360px){main{padding:29px 18px 25px}.photo{width:140px;height:140px}}
+@media(max-width:360px){main{padding:29px 18px 25px}.photo{width:126px;height:126px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}#matrix{display:none}}
 </style>
 </head>
