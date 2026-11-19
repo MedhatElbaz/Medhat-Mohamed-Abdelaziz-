@@ -88,6 +88,11 @@ const lines=['scanning for vulnerabilities...','loading penetration testing tool
 const el=document.getElementById('terminalText');let line=0,pos=0,back=false;
 function type(){const s=lines[line];if(!back){el.textContent=s.slice(0,++pos);if(pos===s.length){back=true;setTimeout(type,1450);return}}else{el.textContent=s.slice(0,--pos);if(pos===0){back=false;line=(line+1)%lines.length}}setTimeout(type,back?24:48)}
 setTimeout(type,700);
+// On Android, explicitly open the personal WhatsApp app (not WhatsApp Business).
+const waButton=document.querySelector('a[aria-label="Chat on WhatsApp"]');
+if(waButton && /Android/i.test(navigator.userAgent)){
+  waButton.href='intent://send?phone=201028846518#Intent;scheme=whatsapp;package=com.whatsapp;S.browser_fallback_url=https%3A%2F%2Fwa.me%2F201028846518;end';
+}
 </script>
 </body>
 </html>
